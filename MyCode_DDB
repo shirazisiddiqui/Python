@@ -1,6 +1,7 @@
-# -*- coding: utf-8 -*-
+# -*-coding:utf-8 -*-
 # program: This program will use the Double-declining method
 #to calculate the yearly depreciation
+
 item_name = input("Enter name of item purchased: ")
 SV_str = input("Enter year purchased: ")
 B_str = input("Enter cost of item: ")
@@ -19,18 +20,22 @@ BV_t = 0
   # SL variables
 sl_BV_t = 0
 sl_d_t = 0
-sl_sum_dt = 0   
+sl_sum_dt = 0 
+
    # SL
 sl_sum_dt = sum_d_t
+
     # BV_t of SL is from previous BV w/o depreciation
 sl_BV_t = BV_t
+
     # DDB
 print("Description:", item_name)
 print("Year of purchase: ", SV_str)
 print("Cost: ${0:,.2f}".format(float(B_str)))
 print("Estimated life: ",N_str,"years")
 print("Method of depreciation: double-declining balance")
-print("Year    Value at Beg of Yr.   Amount Deprec During Year:  Total Depreciation to End of Year:")    
+print("Year    Value at Beg of Yr.   Amount Deprec During Year:  Total Depreciation to End of Year:") 
+
 for i in range(SV, SV+N):
   B =  B - sum_d_t
   sum_d_t = (2.0/float(N))*(B)
